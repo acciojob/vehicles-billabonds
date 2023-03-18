@@ -23,28 +23,33 @@ public class F1 extends Car {
 
         if(newSpeed == 0) {
             //Stop the car, set gear as 1
+            super.stop();
             setCurrentGear(1);
         }
         else if(rate>0 && rate<=50){
+            setCurrentSpeed(newSpeed);
             setCurrentGear(1);
         }
         else if(rate>50 && rate<=100){
+            setCurrentSpeed(newSpeed);
             setCurrentGear(2);
         }
         else if(rate>100 && rate<=150){
+            setCurrentSpeed(newSpeed);
             setCurrentGear(3);
         }
         else if(rate>150 && rate<=200){
+            setCurrentSpeed(newSpeed);
             setCurrentGear(4);
         }
         else if(rate>200 && rate<=250){
+            setCurrentSpeed(newSpeed);
             setCurrentGear(5);
         }
         else if(rate>250){
+            setCurrentSpeed(newSpeed);
             setCurrentGear(6);
         }
-
-        setCurrentSpeed(newSpeed);
 
         //for all other cases, change the gear accordingly
         if(newSpeed > 0){
